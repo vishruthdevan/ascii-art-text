@@ -1,0 +1,22 @@
+{
+  "name": "ascii-art-text",
+  "version": "1.0.0",
+  "description": "CLI to generate text in ASCII art fonts",
+  "main": "bin/index.js",
+  "bin": {
+    "art": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishruthdevan/ascii-art-text.git"
+  },
+  "author": "Vishruth Devan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishruthdevan/ascii-art-text/issues"
+  },
+  "homepage": "https://github.com/vishruthdevan/ascii-art-text#readme"
+}
