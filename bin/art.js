@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import program from "commander";
+import asciify from "./asciify.js";
 
 program
   .version("1.0.0")
@@ -11,8 +12,8 @@ program
 program
   .command("asciify")
   .argument("<text>", "Text to ASCIIfy")
-  .option("-f, --font", "Get text in a specific font")
-  .action(console.log("asciify text"))
+  .option("-f, --font <font>", "Get text in a specific font")
+  .action(asciify)
   .description("Gets ASCIIfied text from the prints the output");
 
 program
