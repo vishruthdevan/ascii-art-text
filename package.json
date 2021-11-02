@@ -21,7 +21,8 @@
   "homepage": "https://github.com/vishruthdevan/ascii-art-text#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "commander": "^8.3.0"
+    "commander": "^8.3.0",
+    "node-fetch": "^3.0.0"
   },
   "type": "module"
 }
