@@ -2,6 +2,7 @@
 
 import program from "commander";
 import asciify from "./asciify.js";
+import list from "./list.js";
 
 program
   .version("1.0.0")
@@ -18,7 +19,7 @@ program
 
 program
   .command("list")
-  .action(console.log("list fonts"))
+  .action(list)
   .description("Retrieve a list of all available available");
 
 program.parse(process.argv);
