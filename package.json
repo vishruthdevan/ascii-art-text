@@ -2,9 +2,9 @@
   "name": "ascii-art-text",
   "version": "1.0.0",
   "description": "CLI to generate text in ASCII art fonts",
-  "main": "bin/index.js",
+  "main": "bin/art.js",
   "bin": {
-    "art": "./bin/index.js"
+    "art": "./bin/art.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/vishruthdevan/ascii-art-text/issues"
   },
-  "homepage": "https://github.com/vishruthdevan/ascii-art-text#readme"
+  "homepage": "https://github.com/vishruthdevan/ascii-art-text#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^8.3.0"
+  },
+  "type": "module"
 }
