@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import program from "commander";
+import { program } from "commander";
 import asciify from "./asciify.js";
 import list from "./list.js";
 
