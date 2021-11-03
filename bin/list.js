@@ -6,7 +6,9 @@ export default async () => {
   const list = await res.text();
   let fonts = list.split("\n");
   fonts.forEach(async (font) => {
-    const text = await fetch(`${url}${encodeURI(font)}&font=${font}`);
-    return console.log(`\n${font}:\n${await text.text()}`);
+    let res = await fetch(`${url}${encodeURI(font)}&font=${font}`);
+    let text = await res.text();
+    console.log(`\n${font}:\n${text}`);
+    // return console.log(`\n${font}:\n${await text.text()}`);
   });
 };
