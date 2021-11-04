@@ -19,7 +19,8 @@ program
 
 program
   .command("list")
+  .option("-n, --no-render", "Get only the name of the fonts")
   .action(list)
-  .description("Retrieve a list of all available available");
+  .description("Retrieve a rendered list of all available fonts");
 
 program.parse(process.argv);

@@ -5,17 +5,16 @@ const check = async (text, options) => {
   if (options.font) {
     try {
       const res = await fetch(`${url}${encodeURI(text)}&font=${options.font}`);
-      return console.log(await res.text());
+      console.log(await res.text());
     } catch (err) {
-      return console.log(err.message);
+      console.log(err.message);
     }
-  }
-  if (text) {
+  } else {
     try {
       const res = await fetch(url + encodeURI(text));
-      return console.log(await res.text());
+      console.log(await res.text());
     } catch (err) {
-      return console.log(err.message);
+      console.log(err.message);
     }
   }
 };
