@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import { program } from "commander";
-import asciify from "./asciify.js";
-import list from "./list.js";
+import asciify from "../src/asciify.js";
+import list from "../src/list.js";
 
 program
   .version("1.0.0")
