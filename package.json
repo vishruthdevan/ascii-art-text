@@ -22,7 +22,8 @@
   "dependencies": {
     "colors": "^1.4.0",
     "commander": "^8.3.0",
-    "node-fetch": "^3.0.0"
+    "node-fetch": "^3.0.0",
+    "pkg": "^5.4.1"
   },
   "type": "module"
 }
