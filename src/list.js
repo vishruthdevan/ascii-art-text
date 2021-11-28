@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-
+import colors from "colors";
 export default async (options) => {
   const url = "https://artii.herokuapp.com/make?text=";
   const res = await fetch(`https://artii.herokuapp.com/fonts_list`);
@@ -8,13 +8,13 @@ export default async (options) => {
 
   if (!options.render) {
     fonts.forEach((font) => {
-      console.log(`${font}`);
+      console.log(`${font}`.green);
     });
   } else {
     fonts.forEach(async (font) => {
       let res = await fetch(`${url}${encodeURI(font)}&font=${font}`);
       let text = await res.text();
-      console.log(`\n${font}:\n${text}`);
+      console.log(`\n${font}:\n${text}`.blue);
     });
   }
 };
