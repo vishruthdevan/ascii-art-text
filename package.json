@@ -2,7 +2,7 @@
   "name": "ascii-art-text",
   "version": "1.0.0",
   "description": "CLI to generate text in ASCII art fonts",
-  "main": "bin/art.js",
+  "main": "./bin/art.js",
   "bin": {
     "art": "./bin/art.js"
   },
@@ -22,8 +22,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "commander": "^8.3.0",
-    "node-fetch": "^3.0.0",
-    "pkg": "^5.4.1"
+    "node-fetch": "^3.0.0"
   },
   "type": "module"
 }
