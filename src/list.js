@@ -1,20 +1,20 @@
 import fetch from "node-fetch";
 import colors from "colors";
 export default async (options) => {
-  const url = "https://artii.herokuapp.com/make?text=";
-  const res = await fetch(`https://artii.herokuapp.com/fonts_list`);
-  const list = await res.text();
-  let fonts = list.split("\n");
+    const url = "http://api.textart.io/figlet?text=";
+    const res = await fetch(`http://api.textart.io/figlet/list_styles.json`);
+    let list = await res.json();
+    let fonts = list.contents.fonts;
 
-  if (!options.render) {
-    fonts.forEach((font) => {
-      console.log(`${font}`.green);
-    });
-  } else {
-    fonts.forEach(async (font) => {
-      let res = await fetch(`${url}${encodeURI(font)}&font=${font}`);
-      let text = await res.text();
-      console.log(`\n${font}:\n${text}`.blue);
-    });
-  }
+    if (!options.render) {
+        fonts.forEach((font) => {
+            console.log(`${font}`.green);
+        });
+    } else {
+        fonts.forEach(async (font) => {
+            let res = await fetch(`${url}${encodeURI(font)}&style=${font}`);
+            let text = await res.text();
+            console.log(`\n${font}:\n${text}`.blue);
+        });
+    }
 };
